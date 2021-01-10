@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Sudoku.css">
+    <title>Sudoku</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container mt-1 text-center"  id="Div-header" >
+        <h1 class="text-success display-3 font-weight-bold"><i>Sudoku</i></h1>
+    </div>
+    <div class="container mt-1 text-center"  id="Div-winner" >
+        <img src="imges/Winner.jpg" alt=""
+        width="70%"  height="280px"
+        class="border border-dark rounded"
+        >
+    </div>
+    <div class="container mt-1 text-center"  id="Div-GameOver" >
+        <img src="imges/GameOver.jpeg" alt=""
+        width="70%"  height="280px"
+        class="border border-dark rounded"
+        >
+    </div>
+    <div class="container bg-dark border-y border-info big-div" style="width: 300px;" id="bg-div1" >
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div1" ><button class="btn btn-sm btn-dark border border-white " data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div2" ><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div3" ><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div4" ><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div5" ><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div6" ><button class="btn btn-sm btn-dark border border-white" data-index="4">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div7" ><button class="btn btn-sm btn-success border border-white disabled">4</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div8" ><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div9" ><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div10" ><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div11" ><button class="btn btn-sm btn-dark border border-white" data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div12" ><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div13" ><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div14" ><button class="btn btn-sm btn-dark border border-white" data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div15" ><button class="btn btn-sm btn-dark border border-white" data-index="3">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div16" ><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div17" ><button class="btn btn-sm btn-dark border border-white" data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div18" ><button class="btn btn-sm btn-dark border border-white" data-index="2">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div19" ><button class="btn btn-sm btn-dark border border-white" data-index="2">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div20" ><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div21" ><button class="btn btn-sm btn-dark border border-white" data-index="4">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div22" ><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div23" ><button class="btn btn-sm btn-success border border-white disabled">1</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div24" ><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div25" ><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div26" ><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div27" ><button class="btn btn-sm btn-dark border border-white" data-index="5">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div28" ><button class="btn btn-sm btn-dark border border-white" data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div29" ><button class="btn btn-sm btn-dark border border-white" data-index="6">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div30" ><button class="btn btn-sm btn-dark border border-white" data-index="1">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div31" ><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div32" ><button class="btn btn-sm btn-success border border-white disabled">4</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div33" ><button class="btn btn-sm btn-dark border border-white" data-index="1">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div34" ><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div35" ><button class="btn btn-sm btn-dark border border-white" data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div36" ><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                </div>
+            </div>    
+        </div>
+    </div> 
+    <div class="container bg-dark border-y border-info big-div" style="width: 300px;" id="bg-div2" >
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div1"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div2"><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div3"><button class="btn btn-sm btn-success border border-white disabled">1</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div4"><button class="btn btn-sm btn-success border border-white disabled">4</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div5"><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div6"><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div7"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div8"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div9"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div10"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div11"><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div12"><button class="btn btn-sm btn-success border border-white disabled">1</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div13"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div14"><button class="btn btn-sm btn-success border border-white disabled">1</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div15"><button class="btn btn-sm btn-success border border-white disabled">4</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div16"><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div17"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div18"><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div19"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div20"><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div21"><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div22"><button class="btn btn-sm btn-success border border-white disabled">4</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div23"><button class="btn btn-sm btn-success border border-white disabled">1</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div24"><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div25"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div26"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div27"><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div28"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div29"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div30"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div31"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div32"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div33"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div34"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div35"><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div36"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="container bg-dark border-y border-info big-div" style="width: 300px;" id="bg-div3" >
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div1"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div2"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div3"><button class="btn btn-sm btn-dark border border-white" data-index="2">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div4"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div5"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div6"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div7"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div8"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div9"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div10"><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div11"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div12"><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div13"><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div14"><button class="btn btn-sm btn-dark border border-white"data-index="2">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div15"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div16"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div17"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div18"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div19"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div20"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div21"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div22"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div23"><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div24"><button class="btn btn-sm btn-dark border border-white"data-index="6">?</button></div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col border border-info ml-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div25"><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div26"><button class="btn btn-sm btn-dark border border-white"data-index="5">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div27"><button class="btn btn-sm btn-success border border-white disabled">3</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div28"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div29"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div30"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                </div>
+            </div>
+            <div class="col border border-info mr-2">
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div31"><button class="btn btn-sm btn-dark border border-white"data-index="4">?</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div32"><button class="btn btn-sm btn-success border border-white disabled">6</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div33"><button class="btn btn-sm btn-dark border border-white"data-index="1">?</button></div>
+                </div>
+                <div class="row">
+                    <div class="col  p-0 m-2 text-center " id="div34"><button class="btn btn-sm btn-success border border-white disabled">2</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div35"><button class="btn btn-sm btn-success border border-white disabled">5</button></div>
+                    <div class="col  p-0 m-2 text-center " id="div36"><button class="btn btn-sm btn-dark border border-white"data-index="3">?</button></div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="container bg-dark all-divs text-center mt-4 mb-1" style="width: 700px; ">
+        <div class="container bg-dark  text-secondary text-center mt-2 m-div" style="width: 400px; ">
+            <button class="btn btn-sm btn-danger border" id="btn-delete">delete</button>
+        </div>
+        <div class="container bg-dark text-secondary text-center mt-3 l-div" style="width: 400px; ">
+            <button class="btn btn-sm btn-primary border">1</button>
+            <button class="btn btn-sm btn-primary border">2</button>
+            <button class="btn btn-sm btn-primary border">3</button>
+            <button class="btn btn-sm btn-primary border">4</button>
+            <button class="btn btn-sm btn-primary border">5</button>
+            <button class="btn btn-sm btn-primary border">6</button>
+        </div>
+        <div class="container bg-dark  text-secondary text-center mt-3 footer-div" style="width: 400px; ">
+            <button class="btn btn-sm btn-primary border" id="btn-Newgame">new game </button>
+        </div>
+        <div class="container bg-warning  text-secondary text-center mt-3 " id="div-d" style="width: 100%;  ">
+            <p style="color: black;"><span class="span">وصف اللعبه</span><br>القواعد :- لا يجوز وضع نفس الرقم من الارقام السته فى نفس الصف او العمود او المستطيل<br><span class="span">الخطوات</span><br> يجب الضغط على الزرار المراد وضع 
+            محتواه ثم الضغط على الرقم المراد وضعه من الست ازار التى بالاسفل ويمكن الحذف بنفس الطريقه لكن بالضغط على زر الحذف  </p>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="Sudoku.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

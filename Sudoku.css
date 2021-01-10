@@ -1,0 +1,4 @@
+.big-div, #Div-winner ,#Div-GameOver{position: absolute ;top: 14%;left: 50%;transform: translate(-50%,0);}
+.all-divs{position: absolute ;top: 54%;left: 50%;transform: translate(-50%,0);}
+.span{color: brown;}
+.bg-divhedden{display: none;}
